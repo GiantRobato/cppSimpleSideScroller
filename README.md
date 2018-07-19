@@ -13,7 +13,7 @@ Simple side scroller made in C++ with visual studios using SDL and C++11.
 # Licensing
 
 - Background sprites were made by [Jacob Zinman-Jeanes](http://jeanes.co) licensed under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
-- 
+- Math.h and derivative files by Sanjay Madhav (see LICENSE2.txt)
 
 # 7/12
 **Q:** how does it sprite creation work?
