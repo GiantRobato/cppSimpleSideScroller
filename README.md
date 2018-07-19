@@ -3,6 +3,18 @@ Simple side scroller made in C++ with visual studios using SDL and C++11.
 
 ![Screenshot](Asteroids/Assets/screenshot.png)
 
+# Classes
+
+* Actor - base class for all Actors
+* Game - initializes renderer + Actors and runs main update loop
+* Main - simple wrapper around the game loop
+* Math - From Game Programming in C++ by Sanjay Madhav (see file for licensing)
+
+# Licensing
+
+- Background sprites were made by [Jacob Zinman-Jeanes](http://jeanes.co) licensed under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
+- 
+
 # 7/12
 **Q:** how does it sprite creation work?
 
