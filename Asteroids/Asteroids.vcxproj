@@ -159,6 +159,7 @@
   <ItemGroup>
     <Image Include="Assets\Farback01.png" />
     <Image Include="Assets\Farback02.png" />
+    <Image Include="Assets\screenshot.png" />
     <Image Include="Assets\Ship.png" />
     <Image Include="Assets\Stars.png" />
   </ItemGroup>

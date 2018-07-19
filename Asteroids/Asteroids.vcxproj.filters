@@ -76,5 +76,8 @@
     <Image Include="Assets\Stars.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Assets\screenshot.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
