@@ -1,7 +1,7 @@
 # CPP SideScroller
 Simple side scroller made in C++ with visual studios using SDL and C++11.
 
-![Screenshot](/Assets/screenshot.png)
+![Screenshot](Asteroids/Assets/screenshot.png)
 
 # 7/12
 **Q:** how does it sprite creation work?
