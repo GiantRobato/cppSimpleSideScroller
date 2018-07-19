@@ -27,7 +27,32 @@ Simple side scroller made in C++ with visual studios using SDL and C++11.
 - Scrolling backgrounds
   - foreground and background textures moving at different speeds
 
-# 7/12
-**Q:** how does it sprite creation work?
+# Questions
+**Q:** How does sprite creation work since we don't directly pass in a reference to the game?For example, when we load the ship instance in the LoadData function in the Game class we don't load the sprite.
 
-**A:** For example, when we load the ship instance in the LoadData function in the Game class we also create a sprite component. Creating a sprite component using a dependncy injection with a reference of the owning Actor object. The base component class attaches adds itself to the list of components in the actor's list of components.
+**A:** The ship class in it's constructor creates a sprite component and uses dependency injection to not only add the component to the actor's (ship) internal list of components but also adds the sprite component to list of sprites the game will render. This is a result of having eaching actor also have a reference to the main Game class. 
+
+```C++
+//in ship constructor
+SpriteComponent* sprite = new SpriteComponent(this, 150);	
+
+//in SpriteComponent constructor
+//where mOwner is an Actor
+mOwner->GetGame()->AddSprite(this);
+
+//addSprite in Game.cpp
+void Game::AddSprite(class SpriteComponent* sprite) {
+	int myDrawOrder = sprite->GetDrawOrder();
+	auto iter = mSprites.begin();
+	for ( ; iter != mSprites.end(); ++iter) {
+		if (myDrawOrder < (*iter)->GetDrawOrder()) {
+			break;
+		}
+	}
+
+	// Inserts element before position of iterator
+	mSprites.insert(iter, sprite);
+}
+```
+
+

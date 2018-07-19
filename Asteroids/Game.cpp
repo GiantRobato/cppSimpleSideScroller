@@ -214,6 +214,7 @@ void Game::AddSprite(class SpriteComponent* sprite) {
 	// Inserts element before position of iterator
 	mSprites.insert(iter, sprite);
 }
+
 void Game::RemoveSprite(class SpriteComponent* sprite) {
 	auto iter = std::find(mSprites.begin(), mSprites.end(), sprite);
 	mSprites.erase(iter);
